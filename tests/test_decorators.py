@@ -5,6 +5,7 @@ from pytest import fixture
 from .context import create_reporter
 from .context import report_call
 from .context import report_execution
+from .context import report_time
 
 
 class TestSimpleDecorators(object):
@@ -30,4 +31,13 @@ class TestSimpleDecorators(object):
             return a - b
 
         substract(2, 1)
+        assert mock_process.called
+
+    @patch('logging.Logger.debug')
+    def test_time(self, mock_process, reporter):
+        @report_time
+        def multiply(a: int, b: int) -> int:
+            return a * b
+
+        multiply(2, 6)
         assert mock_process.called
