@@ -49,3 +49,25 @@ def report_time(func):
         )
         return result
     return wrapper
+
+
+def report_mutation(variable):
+    def mutation_decorator(func):
+        def wrapper(*args, **kwargs):
+            logger = logging.getLogger('reporter')
+            logger.debug(
+                'Variable is {} before {} execution'.format(
+                    variable,
+                    func.__name__
+                )
+            )
+            result = func(*args, **kwargs)
+            logger.debug(
+                'Variable is {} after {} execution'.format(
+                    variable,
+                    func.__name__
+                )
+            )
+            return result
+        return wrapper
+    return mutation_decorator
