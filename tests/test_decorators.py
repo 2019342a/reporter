@@ -9,14 +9,13 @@ from .context import report_mutation
 from .context import report_time
 
 
-class TestSimpleDecorators(object):
-
+class TestSimpleDecorators:
     @fixture
     def reporter(self):
         create_reporter()
         return None
 
-    @patch('logging.Logger.debug')
+    @patch("logging.Logger.debug")
     def test_execution(self, mock_process, reporter):
         @report_execution
         def add(a: int, b: int) -> int:
@@ -25,7 +24,7 @@ class TestSimpleDecorators(object):
         add(1, 2)
         assert mock_process.called
 
-    @patch('logging.Logger.debug')
+    @patch("logging.Logger.debug")
     def test_call(self, mock_process, reporter):
         @report_call
         def substract(a: int, b: int) -> int:
@@ -34,7 +33,7 @@ class TestSimpleDecorators(object):
         substract(2, 1)
         assert mock_process.called
 
-    @patch('logging.Logger.debug')
+    @patch("logging.Logger.debug")
     def test_time(self, mock_process, reporter):
         @report_time
         def multiply(a: int, b: int) -> int:
@@ -43,7 +42,7 @@ class TestSimpleDecorators(object):
         multiply(2, 6)
         assert mock_process.called
 
-    @patch('logging.Logger.debug')
+    @patch("logging.Logger.debug")
     def test_mutation(self, mock_process, reporter):
         variable = [1, 2, 3]
 

@@ -1,14 +1,18 @@
 import logging
 
+import colorlog
+
 
 def create_reporter():
-    logger = logging.getLogger('reporter')
+    logger = colorlog.getLogger("reporter")
     logger.setLevel(logging.DEBUG)
 
-    handler = logging.StreamHandler()
+    handler = colorlog.StreamHandler()
     handler.setLevel(logging.DEBUG)
 
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    formatter = colorlog.ColoredFormatter(
+        "%(thin_blue)s%(asctime)s - %(reset)s%(white)s%(name)s - %(bold)s%(log_color)s%(levelname)s - %(reset)s%(purple)s%(message)s"
+    )
 
     handler.setFormatter(formatter)
 
