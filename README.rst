@@ -2,13 +2,16 @@ Reporter
 ===============
 **Lightweight logger decorators for python**
 
-.. image:: https://github.com/2019342a/reporter/workflows/reporter/badge.svg
-     :target: https://github.com/2019342a/reporter
-     :alt: Tests
+
 
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
      :target: https://github.com/ambv/black
      :alt: Black code style
+     
+.. image:: https://github.com/2019342a/reporter/workflows/reporter/badge.svg
+     :target: https://github.com/2019342a/reporter
+     :alt: Tests
+
 
 :License: MIT
 
