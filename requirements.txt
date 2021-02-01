@@ -1,5 +1,5 @@
 # Testing
-pytest==6.2.1  # https://github.com/pytest-dev/pytest
+pytest==6.2.2  # https://github.com/pytest-dev/pytest
 pytest-sugar==0.9.4  # https://github.com/Frozenball/pytest-sugar
 
 # Code quality
