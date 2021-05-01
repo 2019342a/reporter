@@ -8,4 +8,4 @@ coverage==5.5  # https://github.com/nedbat/coveragepy
 black==21.4b2  # https://github.com/ambv/black
 
 # Coloring
-colorlog==4.8.0 # https://github.com/borntyping/python-colorlog
+colorlog==5.0.1 # https://github.com/borntyping/python-colorlog
