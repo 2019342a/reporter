@@ -30,6 +30,11 @@ Features
 How do I get set up?
 --------------------
 
+Use :code:`pip install git+ssh://git@github.com/2019342a/reporter` to install the library. Then you are good to go!
+
+Example
+-------
+
 Contact
 -------
 If you have any questions, bugs or features please open a github issue.
