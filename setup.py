@@ -8,4 +8,5 @@ setup(
     author_email="theofilosalexiou@gmail.com",
     url="https://github.com/2019342a/reporter",
     packages=["reporter"],
+    install_requires=('colorlog==4.2.1',),
 )
