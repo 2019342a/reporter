@@ -64,3 +64,39 @@ def report_mutation(variable):
         return wrapper
 
     return mutation_decorator
+
+
+def report_str(obj):
+    def str_decorator(func):
+        def wrapper(*args, **kwargs):
+            logger = logging.getLogger("reporter")
+            logger.debug(
+                "{} before {} execution using `str`".format(str(obj), func.__name__)
+            )
+            result = func(*args, **kwargs)
+            logger.debug(
+                "{} after {} execution using `str`".format(str(obj), func.__name__)
+            )
+            return result
+
+        return wrapper
+
+    return str_decorator
+
+
+def report_repr(obj):
+    def repr_decorator(func):
+        def wrapper(*args, **kwargs):
+            logger = logging.getLogger("reporter")
+            logger.debug(
+                "{} before {} execution using `repr`".format(repr(obj), func.__name__)
+            )
+            result = func(*args, **kwargs)
+            logger.debug(
+                "{} after {} execution using `repr`".format(repr(obj), func.__name__)
+            )
+            return result
+
+        return wrapper
+
+    return repr_decorator

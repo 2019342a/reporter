@@ -6,10 +6,19 @@ from .context import create_reporter
 from .context import report_call
 from .context import report_execution
 from .context import report_mutation
+from .context import report_repr
+from .context import report_str
 from .context import report_time
 
 
 class TestSimpleDecorators:
+    class DummyClass:
+        def __str__(self) -> str:
+            return "str method"
+
+        def __repr__(self) -> str:
+            return "repr method"
+
     @fixture
     def reporter(self):
         create_reporter()
@@ -51,4 +60,26 @@ class TestSimpleDecorators:
             var[0] = 2
 
         mutate(variable)
+        assert mock_process.called
+
+    @patch("logging.Logger.debug")
+    def test_str(self, mock_process, reporter):
+        obj = self.DummyClass()
+
+        @report_str(obj)
+        def nothing():
+            ...
+
+        nothing()
+        assert mock_process.called
+
+    @patch("logging.Logger.debug")
+    def test_repr(self, mock_process, reporter):
+        obj = self.DummyClass()
+
+        @report_repr(obj)
+        def nothing():
+            ...
+
+        nothing()
         assert mock_process.called

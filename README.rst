@@ -7,7 +7,7 @@ Reporter
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
      :target: https://github.com/ambv/black
      :alt: Black code style
-     
+
 .. image:: https://github.com/2019342a/reporter/workflows/reporter/badge.svg
      :target: https://github.com/2019342a/reporter
      :alt: Tests
@@ -26,6 +26,7 @@ Features
 - Display the result of a function
 - Display a value before and after a fucntion was executed
 - Display the execution time
+- Display the :code:`str` and :code:`repr` method of an object before and after
 
 How do I get set up?
 --------------------
@@ -39,18 +40,18 @@ Example
 
  from reporter.utils import create_reporter
  from reporter.decorators import report_execution
- 
+
  # Initialise the logger
  create_reporter()
- 
+
  @report_execution
  def add(a: int, b: int) -> int:
     return a + b
- 
- 
+
+
  add(1, 2)
- 
-You should then see in your terminal something like: 
+
+You should then see in your terminal something like:
 
 :code:`2021-05-15 11:05:53,114 - reporter - DEBUG - add was executed with 1 2`
 
