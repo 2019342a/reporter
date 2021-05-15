@@ -36,8 +36,23 @@ Example
 -------
 
 .. code-block:: python
-    from reporter.utils import create_reporter
-    from reporter.decorators import report_executio
+
+ from reporter.utils import create_reporter
+ from reporter.decorators import report_execution
+ 
+ # Initialise the logger
+ create_reporter()
+ 
+ @report_execution
+ def add(a: int, b: int) -> int:
+    return a + b
+ 
+ 
+ add(1, 2)
+ 
+You should then see in your terminal something like: 
+
+:code:`2021-05-15 11:05:53,114 - reporter - DEBUG - add was executed with 1 2`
 
 Contact
 -------
