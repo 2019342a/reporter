@@ -36,8 +36,8 @@ Example
 -------
 
 .. code-block:: python
- from reporter.utils import create_reporter
- from reporter.decorators import report_executio
+    from reporter.utils import create_reporter
+    from reporter.decorators import report_executio
 
 Contact
 -------
