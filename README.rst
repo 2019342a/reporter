@@ -35,7 +35,7 @@ Use :code:`pip install git+ssh://git@github.com/2019342a/reporter` to install th
 Example
 -------
 
-.. highlight:: python
+.. code-block:: python
  from reporter.utils import create_reporter
  from reporter.decorators import report_executio
 
