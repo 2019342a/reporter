@@ -6,7 +6,7 @@ HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.rst").read_text()
 
 setup(
-    name="reporter",
+    name="logging-reporter",
     version="1.0.0",
     setup_requires=['wheel'],
     description="Lightweight logger decorators for python",
