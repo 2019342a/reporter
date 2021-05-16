@@ -1,5 +1,5 @@
-Reporter
-===============
+Logging Reporter
+================
 **Lightweight logger decorators for python**
 
 
@@ -18,6 +18,7 @@ Reporter
 What is this repository?
 ------------------------
 Extends default python logging `module <https://docs.python.org/3/library/logging.html>`_ to make it easier to log actions before and after running functions and methods.
+Usefull when debugging an application and you want to see the time a function takes or when the function was called.
 
 Features
 --------
@@ -32,6 +33,11 @@ How do I get set up?
 --------------------
 
 Use :code:`pip install git+ssh://git@github.com/2019342a/reporter` to install the library. Then you are good to go!
+
+
+Dependencies
+------------
+logging-reporter requires `colorlog <https://github.com/borntyping/python-colorlog>`_ to add colour to the reporter logs.
 
 Example
 -------
@@ -53,7 +59,7 @@ Example
 
 You should then see in your terminal something like:
 
-:code:`2021-05-15 11:05:53,114 - reporter - DEBUG - add was executed with 1 2`
+:code:`2021-05-15 11:05:53,114 - reporter - DEBUG - add was executed with args 1 2`
 
 Contact
 -------
