@@ -46,7 +46,9 @@ class TestSimpleDecorators:
         substract(2, 1, c=1)
         assert mock_process.called
         mock_process.assert_any_call("substract with args 2 1, is about to be executed")
-        mock_process.assert_called_with("substract with args 2 1, kwargs c=1, is about to be executed")
+        mock_process.assert_called_with(
+            "substract with args 2 1, kwargs c=1, is about to be executed"
+        )
 
     @patch("logging.Logger.debug")
     def test_time(self, mock_process, reporter):
