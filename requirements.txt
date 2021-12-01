@@ -4,7 +4,7 @@ pytest-sugar==0.9.4  # https://github.com/Frozenball/pytest-sugar
 
 # Code quality
 flake8==4.0.1  # https://github.com/PyCQA/flake8
-coverage==6.1.1  # https://github.com/nedbat/coveragepy
+coverage==6.2  # https://github.com/nedbat/coveragepy
 black==21.11b1  # https://github.com/ambv/black
 
 # Coloring
