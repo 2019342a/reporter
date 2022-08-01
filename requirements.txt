@@ -3,7 +3,7 @@ pytest==7.1.2  # https://github.com/pytest-dev/pytest
 pytest-sugar==0.9.5  # https://github.com/Frozenball/pytest-sugar
 
 # Code quality
-flake8==4.0.1  # https://github.com/PyCQA/flake8
+flake8==5.0.1  # https://github.com/PyCQA/flake8
 coverage==6.4.2  # https://github.com/nedbat/coveragepy
 black==22.6.0  # https://github.com/ambv/black
 
