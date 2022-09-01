@@ -25,5 +25,5 @@ setup(
     url="https://github.com/2019342a/reporter",
     packages=["reporter"],
     include_package_data=True,
-    install_requires=["colorlog==6.6.0"],
+    install_requires=["colorlog==6.7.0"],
 )
